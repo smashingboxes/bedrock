@@ -1,28 +1,8 @@
 {
-  "name": "roots/bedrock",
+  "name": "smashingboxes/wordpres-stack",
   "type": "project",
   "license": "MIT",
-  "description": "A modern WordPress stack",
-  "homepage": "https://roots.io/bedrock/",
-  "authors": [
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
-    }
-  ],
-  "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
-  ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
+  "description": "The WordPress stack for Smashing Boxes",
   "config": {
     "preferred-install": "dist"
   },
@@ -38,10 +18,9 @@
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.6",
     "oscarotero/env": "^1.0",
-    "roots/wp-password-bcrypt": "1.0.0"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^2.5.1"
+    "roots/soil": "3.7.0",
+    "wpackagist-plugin/adminimize": "1.10.6",
+    "wpackagist-plugin/custom-post-type-ui": "1.4.0"
   },
   "extra": {
     "installer-paths": {
@@ -50,10 +29,5 @@
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
-  },
-  "scripts": {
-    "test": [
-      "vendor/bin/phpcs --ignore=web/wp/,vendor/ -n -s ."
-    ]
   }
 }
